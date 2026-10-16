@@ -1,6 +1,7 @@
 package ma.horse;
 
 import ma.horse.adapter.HdmiVgaAdapter;
+import ma.horse.adapter.HdmiVgaAdapterV2;
 import ma.horse.computer.Ecran;
 import ma.horse.computer.TV;
 import ma.horse.computer.UniteCentral;
@@ -15,7 +16,11 @@ public class Main {
         HdmiVgaAdapter adapter = new HdmiVgaAdapter();
         adapter.setHdmi(new TV());
         uniteCentral.setVga(adapter);
-        uniteCentral.print("Bonjour boss");
+        uniteCentral.print("Bonjour ");
+
+        HdmiVgaAdapterV2 adapterV2 = new HdmiVgaAdapterV2();
+        uniteCentral.setVga(adapterV2);
+        uniteCentral.print("Bonsoir ");
 
     }
 }
